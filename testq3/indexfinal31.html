@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Product Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />     
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/3.4.0/css/flag-icons.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        :root{
+            --main-color: rgb(137,199,74);
+                    }
+        
+                *{
+                    padding: 0;
+                    margin: 0;
+                    box-sizing: border-box;
+                    transition: .5s;
+                }
+        
+                .container{
+                    max-width: 80%;
+                    margin: auto;
+                }
+                .products{
+                    margin-top: 10rem;
+                }
+                .products .container .title.h1 {
+                    color: rgb(137, 199, 74);
+                    line-height: 1.8em;
+                    font-weight: 700;
+                    font-size: 2.8rem;
+                    text-transform: capitalize;
+                    position: relative;
+                    text-align: center;
+                }
+                
+                .products .container .product-desc {
+                    text-align: center;
+                    max-width: 600px;
+                    font-size: 1.2rem;
+                    line-height: 1.6;
+                    margin: auto;
+                    padding-bottom: 2rem;
+                }
+                
+                .products .container .tabs {
+                    display: flex;
+                    justify-content: center;
+                    flex-flow: row-reverse wrap;
+                    margin-bottom: 3.5rem;
+                }
+                
+                .products .container .tabs .product-title-image:not(:last-child) {
+                    margin-right: 10px;
+                }
+                .products .container .tabs .product-title-image {
+                    margin: 15px 0;
+                }
+                
+                .products .container .tabs .tablinks {
+                    color: #000000;
+                    cursor: pointer;
+                    padding: 0;
+                    margin: -1px 0 0;
+                    position: relative;
+                    background-color: transparent;
+                    border: none;
+                    border-right: none;
+                    box-shadow: inset 0 0 0 #000000;
+                    transition: all .3s linear;
+                    font-weight: 700;
+                    font-family: "Open Sans", sans-serif;
+                    font-size: 2rem;
+                    text-transform: capitalize;
+                    width: 180px;
+                    height: 180px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column-reverse;
+                    font-size: 1.4rem;
+                    text-align: center;
+                }
+                
+                .products .container .tabs .tablinks.active {
+                    color: #ffffff;
+                }
+                
+                .products .container .product-title-image .tablinks.active .tab-icon-iamge img {
+                    filter: brightness(0) invert(1);
+                }
+                .products .container .product-title-image .product-title .tab-icon-iamge img {
+                    transition: all 0.3s ease;
+                }
+                
+                img {
+                    max-width: 100%;
+                    object-fit: cover;
+                    height: auto;
+                }
+                
+                .products .container .product-title-image .tablinks::after {
+                    -webkit-mask-image: url('images/products/icon/Untitled-1.png');
+                    mask-image: url('images/products/icon/Untitled-1.png');
+                    -webkit-mask-position: center center;
+                    mask-position: center center;
+                    -webkit-mask-repeat: no-repeat;
+                    mask-repeat: no-repeat;
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    width: 185px;
+                    height: 185px;
+                    z-index: -1;
+                    transform: translate(-50%, -50%);
+                    transition: all 0.3s linear;
+                    background: currentcolor;
+                }
+                
+                .products .container .product-title-image:nth-child(1) .tablinks::after {
+                    background: #e1ffd9;
+                }
+                
+                .products .container .product-title-image:nth-child(2) .tablinks::after {
+                    background: #ffdedc;
+                }
+                
+                .products .container .product-title-image:nth-child(3) .tablinks::after {
+                    background: #dff1ff;
+                }
+                
+                .products .container .product-title-image:nth-child(4) .tablinks::after {
+                    background: #fbf9c9;
+                }
+                
+                .products .container .product-title-image:nth-child(5) .tablinks::after {
+                    background: #ffd8ed;
+                }
+                
+                .products .container .product-title-image:nth-child(6) .tablinks::after {
+                    background: #e1e9fc;
+                }
+                
+                .products .container .product-title-image .tablinks:hover{
+                    color: #ffffff;
+                }
+                .products .container .product-title-image .tablinks:hover::after {
+                    background: rgb(137, 199, 74);
+                }  
+                
+                .products .container .product-title-image .tablinks.active::after {
+                    background: rgb(137, 199, 74);
+                }  
+                
+                .products .container .product-title-image .tablinks:hover .tab-icon-iamge img {
+                    filter: brightness(0) invert(1);
+                }
+                
+                .products ul {
+                    display: flex; /* استخدام flexbox داخل ul */
+                    flex-wrap: wrap; /* السماح للعناصر باللف إلى الصف التالي */
+                    list-style: none; /* إزالة النقاط من القائمة */
+                    justify-content: space-between;
+                }
+                
+                .products ul li {
+                    color: inherit;
+                    text-decoration: none;
+                    border: 1px solid #DEDEDE;
+                    border-radius: 10px;
+                    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+                    display: flex; /* استخدام flexbox لتوزيع العناصر داخل li */
+                    flex-direction: column; /* تحديد الاتجاه العمودي */
+                    align-items: center; /* محاذاة العناصر في المنتصف */
+                    justify-content: center; /* جعل العناصر تتوسط العمود */
+                    text-align: center; /* محاذاة النصوص للوسط */
+                    margin: .5rem; /* مسافة بين العناصر */
+                    width: calc(33.33% - 1rem); /* عرض العنصر بحيث يأخذ ثلث العرض مع الأخذ في الاعتبار المسافة */
+                }
+                
+                .products ul li:hover{
+                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+                    border: 2px solid #89C74A;
+                }
+                
+                .products ul li .card-content{
+                    color: #ffffff;
+                    width: 100%;
+                    text-align: center;
+                    /* position: absolute;*/
+                    position: relative; /* ضروري لاستخدام الأيقونات بالنسبة للعنصر الأب */
+                    height: 250px;
+                    overflow: hidden;
+                }
+                
+                .products ul li .card-content .card-content-img{
+                    width: 100%;
+                    position: relative;
+                    height: 100%;
+                    transform: scale(.8);
+                    object-fit: contain;
+                    
+                }
+                
+                .products ul li:hover .card-content-img {
+                    transform: rotate(5deg) scale(1.1); /* دوران طفيف مع تكبير */
+                }
+                
+                
+                .products ul li .card-content .card-content-icon {
+                    opacity: 0; /* جعل الأيقونات غير مرئية */
+                    visibility: hidden; /* جعل الأيقونات غير مرئية */
+                    transition: opacity 0.5s ease, visibility 0.5s ease; /* إضافة تأثيرات على opacity وvisibility */
+                    margin-top: 10px; /* إضافة مسافة فوق الأيقونات */
+                    z-index: 2;
+                    pointer-events: none;
+                    left: 50%;
+                    bottom: 10px;
+                    transform: translateX(-50%);
+                    padding: 0;
+                    margin: 0;
+                    position: absolute;
+                    justify-content: center;
+                    display: flex;
+                    transition: all 0.3s ease-in-out;
+                }
+                
+                .products ul li:hover .card-content .card-content-icon {
+                    opacity: 1; /* جعل الأيقونات مرئية عند hover */
+                    visibility: visible; /* جعل الأيقونات مرئية */
+                    pointer-events: auto; /* تفعيل التفاعل مع الأيقونات */
+                }
+                
+                .products ul li .card-content .card-content-icon i{
+                    font-size: .7rem;
+                    padding: 0.7rem;
+                    background-color: #000000;
+                    border-radius: 50%;
+                    margin-right: .5rem;
+                }
+                
+                .products ul li .card-content .card-content-icon i:hover{
+                    background-color: #89C74A;
+                    cursor: pointer;
+                }
+                .products ul li .card-information{
+                    text-align: center;
+                
+                }
+                
+                .products ul li .card-information h3 a{
+                    font-size: 1.4rem;
+                    text-decoration: none;
+                    line-height: 2;
+                    color: #89C74A;
+                }
+                
+                .products ul li .card-information .star-icon{
+                    line-height: 1.5;
+                    color: #F9D244;
+                }
+                
+                .products ul li .card-information .price-item {
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    color: #89C74A;
+                    padding: .5rem 0;
+                }
+                
+                .products ul li .card-information .button-produvts ,.products .button-produvts1{
+                    background-color: #89C74A;
+                    color: #ffffff;
+                    padding: .7rem 2rem;
+                    margin-bottom: 1rem;
+                    border: none;
+                    border-radius: 30px;
+                    font-size: 1rem;
+                    cursor: default;
+                }
+        
+                .products .button-produvts1{
+                    margin: 4rem 40%;
+                    width: 20%;
+                }
+                
+                .products .button-produvts1:hover {
+                    background-color: #88c74ab4;/* تغيير لون الخلفية إلى الأبيض */
+                    color: #eaeee5; /* تغيير لون النص إلى الأخضر */
+                    border: 2px solid #89C74A; /* إضافة حدود خضراء */
+                    border-radius: 50px;
+                    cursor: pointer;
+                }
+        
+                @media (max-width:768px){
+                    .products ul li {
+                        width: calc(49.33% - 1rem);
+                    }
+                }
+        
+                @media (max-width: 480px){
+                    .products ul li {
+                        width: calc(100% - 1rem);
+                    }
+                }
+        
+                
+        header{
+            width: 100%;
+            z-index: 1000;
+            background-color: #E0E0E0;
+            position: fixed;
+            top: 0;
+            transition: top 0.3s;
+        }
+        
+        .contact-info {
+            padding: 20px;
+            background-color: var(--main-color);
+            color: rgb(255 , 255, 255);
+        }
+        
+        .contact-info .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .left {
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-info i{
+        
+            padding-right: 10px;
+        }
+        
+        .contact-info .left div {
+            margin-right: 20px;
+        }
+        .left .email::after{
+            content: '|';
+            padding-left: 10px;
+        }
+        
+        .social-icons {
+            display: flex;
+            align-items: center;
+        }
+        .social-icons a {
+            margin-left: 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: rgb(255 , 255, 255);
+            padding-right: 10px;
+        }
+        
+        .nav-list{
+            display: flex;
+            justify-content: space-between;
+            background-color: #E0E0E0;
+        }
+        
+        .logo{
+            display: flex;
+        }
+        
+        .logo #cart {
+            width: 5vw;
+            height: 7vh;
+            margin-top: 2px;
+        }
+        
+        .logo .name-logo h1{
+            color: var(--main-color);
+            font-size: 1.5rem;
+        }
+        
+        .logo .name-logo p{
+            color: rgb(148, 148, 148);
+        }
+        
+        .icon i {
+            margin-right: 25px;
+        }
+        
+        .nav-list{
+            padding: 50px 0 0;
+            font-weight: bold;
+        }
+        
+        .nav-list nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+        }
+        
+        .nav-list nav ul {
+            list-style: none;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        
+        .nav-list nav ul li{
+            display: flex;
+            padding-right: 20px;
+        }
+        
+        .nav-list nav ul li a{
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+        
+        .nav-list nav ul li a:hover{
+            color: var(--main-color)
+        }
+        
+        .nav-list nav ul li a i{
+            padding-left: 10px;
+        }
+        
+        .nav-list nav ul li a.active{
+            color: var(--main-color);
+        }
+        
+        .nav-list .right{
+            display: flex;
+        }
+        
+        .nav-list .icon i:hover{
+            color: var(--main-color);
+            cursor: pointer;
+        }
+        
+        .icon i.list-icon {
+            display: none;
+        }
+        
+        @media (max-width:1279px){
+        
+            header {
+                top: 0;
+            }
+        
+            .icon {
+                display: flex;
+                font-size: 3rem;
+            }
+        
+            .icon i.list-icon {
+                display: block;
+            }
+        
+            .nav-list nav {
+                flex-direction: column;
+                align-items: center;
+                position: fixed;
+                top: 35.4%;
+                background: rgba(0, 0, 0, 0.2);
+                left: -100%; /* بدلاً من -36% لخروجها تماماً */
+                transition: left 0.3s ease;  
+                width: 100%;
+                padding: 0;
+                height: 100vh;
+                z-index: 1000;
+            }
+        
+            .nav-list nav.open{
+                left: 0;
+            }
+        
+            
+            .nav-list nav ul {
+                flex-direction: column;
+                width: 410px;
+                background-color: #fff;
+                height: 100vh;
+                top: 35.4%;
+                position: fixed;
+                left: -100%; /* بدلاً من -36% لخروجها تماماً */
+                transition: left 0.3s ease; /* التحكم في الانتقال */
+            }
+        
+            .nav-list nav ul.open{
+                left:0%
+            }
+        
+            .nav-list nav ul li {
+                font-size: 1.5rem;
+                padding-bottom: 2rem;
+                font-weight: normal;
+            }
+        
+            .nav-list nav ul li.active , .nav-list nav ul li:hover {
+                background-color: var(--main-color);
+            }
+        
+            .nav-list nav ul li.active , .nav-list nav ul li:hover {
+                background-color: var(--main-color);
+                cursor: pointer;
+            }
+        
+            .nav-list nav ul li a{
+                padding-left: 1rem;
+            }
+        
+            .nav-list nav ul li:hover a , .nav-list nav ul li a.active{
+                color: #fff;
+            }
+        
+        }
+        
+        
+        .start{
+            position: fixed;
+            top: 90%;
+            right: 5%;
+            background-color: var(--main-color);
+            padding: 1rem 1.5rem;
+            color: #ffffff;
+            z-index: 2000;
+            text-align: center;
+            border-radius: 50%;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+            display: none;
+            cursor: pointer;
+        }
+        
+        </style>
+</head>
+<body>
+
+    <!-- شريط الإشعارات -->
+<div class="start"><i class="fa-solid fa-arrow-up-long"></i></div>
+
+<header id="header">
+    
+    <!-- باقي الكود الخاص بالهيدر والقائمة الرئيسية -->
+
+    <div class="container">
+
+        <div class="nav-list">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="cart">
+                    <g>
+                        <path fill="#FC8F0E" d="M462.1,121.9,424.8,240.4a50.028,50.028,0,0,1-47.7,35H141.6l-.5.1L115,122l.4-.1Z"></path>
+                        <path fill="#89C74A" d="M393.1 402.1a40.8 40.8 0 1 1-40.8 40.8A40.843 40.843 0 0 1 393.1 402.1zM179.2 402.1a40.8 40.8 0 1 1-40.8 40.8A40.779 40.779 0 0 1 179.2 402.1zM423.9 357.8H195.7a59.918 59.918 0 0 1-59.2-50L96.4 71.6A39.929 39.929 0 0 0 57 38.3H39.9a10 10 0 0 1 0-20H57a59.737 59.737 0 0 1 59.1 50l40.1 236.3a39.929 39.929 0 0 0 39.4 33.3H423.8a10.029 10.029 0 0 1 10 10A9.859 9.859 0 0 1 423.9 357.8z"></path>
+                    </g>
+                </svg>
+                <div class="name-logo">
+                    <h1> ممو ماركت</h1>
+                    <p>markeet Store</p>
+                </div>
+            </div>
+
+            <nav class="overlay">
+                <ul>
+                    <li class="active"><a href="../index.html" class="active">الرئيسيه</a></li>
+                    <li><a href="#home">الباقات</a></li>
+                    <li><a href="#Gatogries">من نحن </a></li>
+                    <li><a href="#special">المنتجات</a></li>
+                    <li><a href="#review"> اراء العملاء</a></li>
+                    <li><a href="#latest-news">المدونه</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                </ul>
+            </nav>
+
+            <div class="right">
+                
+                <div class="icon">
+                    <i class=" list-icon fas fa-bars "></i>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    
+</header>
+    <section class="products">
+        <div class="container">
+            <h2 class="title h1">
+            الباقه الفضيه
+            </h2>
+        
+            <p class="product-desc">
+                خلي تسوقك معانا تجربة ممتعة وسهلة
+            </p>
+        
+            <div class="tabs">
+
+                <div class="product-title-image">
+        
+                    <div class="product-title">
+                
+                        <div class="tablinks active" id="dT_tab-all" data-category="all">
+                            الكل
+        
+                            <div class="tab-icon-iamge">
+                                <img src="images/products/icon/icon-7.png" width="80" height="80" loading="lazy">
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                    
+                <div class="product-title-image">
+        
+                    <div class="product-title">
+                
+                        <div class="tablinks" id="dT_tab-milk" data-category="milk">
+                            منتجات الألبان <br>والزيوت
+        
+                            <div class="tab-icon-iamge">
+                                <img src="images/products/icon/icon-6.png" width="80" height="80" loading="lazy">
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-title-image">
+        
+                    <div class="product-title">
+                
+                        <div class="tablinks" id="dT_tab-fruits" data-category="fruits">
+                            المعلبات والمعلبات <br>الجاهزة
+        
+                            <div class="tab-icon-iamge">
+                                <img src="images/products/icon/icon-5.png" width="80" height="80" loading="lazy">
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                
+            
+            
+        
+                <div class="product-title-image">
+        
+                    <div class="product-title">
+                
+                        <div class="tablinks" id="dT_tab-flour ">
+                            المواد الغذائية <br>الأساسية
+        
+                            <div class="tab-icon-iamge">
+                                <img src="images/products/icon/icon-4.png" width="80" height="80" loading="lazy">
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                
+            
+            
+            
+                <div class="product-title-image">
+        
+                    <div class="product-title">
+                
+                        <div class="tablinks" id="dT_tab-meat">
+                            التوابل والبقوليات <br>والوجبات الجافة
+        
+                            <div class="tab-icon-iamge">
+                                <img src="images/products/icon/icon-3.png" width="80" height="80" loading="lazy">
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="product-title-image">
+        
+                    <div class="product-title">
+                
+                        <div class="tablinks" id="dT_tab-vegetables">
+                            المنظفات والعناية<br> الشخصية
+        
+                            <div class="tab-icon-iamge">
+                                <img src="images/products/icon/icon-2.png" width="80" height="80" loading="lazy">                    
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- <div class="product-title-image">
+        
+                    <div class="product-title">
+        
+                        <div class="tablinks" id="dT_tab-eggs">
+                            eggs 
+        
+                            <div class="tab-icon-iamge">                   
+                                <img src="products/icon/icon-1.png" width="80" height="80" loading="lazy">                    
+                            </div> 
+                        </div>
+                    </div>
+                </div> -->
+            
+            </div>
+        </div>
+        <ul class="container">
+
+            <li data-category="milk">
+                <div class="card-content">
+                    <img src="images/products/card-content/Kabo.png" alt="" srcset="" class="card-content-img">
+                    <div class="card-content-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+                <div class="card-information">
+                    <h3>
+                        <a href="#"> لبن بدره </a>
+                    </h3>
+                    <div class="star-icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="price-item"> 1kg </p>
+                    <button class="button-produvts"><a>متوفر</a></button>
+                </div>
+            </li>
+
+
+            <li data-category="milk">
+                <div class="card-content">
+                    <img src="images/products/card-content/zet.jfif" alt="" srcset="" class="card-content-img">
+                    <div class="card-content-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+                <div class="card-information">
+                    <h3>
+                        <a href="#"> باقة زيت</a>
+                    </h3>
+                    <div class="star-icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="price-item"> 5 liter </p>
+                    <button class="button-produvts"><a>متوفر</a></button>
+                </div>
+            </li>
+
+            <li data-category="meat">
+                <div class="card-content">
+                    <img src="images/products/card-content/pasta.png" alt="" srcset="" class="card-content-img">
+                    <div class="card-content-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+                <div class="card-information">
+                    <h3>
+                        <a href="#">مكرونه نوبو</a>
+                    </h3>
+                    <div class="star-icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="price-item"> ٥ أكياس</p>
+                    <button class="button-produvts"><a>متوفر</a></button>
+                </div>
+            </li>
+
+            <li data-category="meat">
+                <div class="card-content">
+                    <img src="images/products/card-content/pasta2.jfif" alt="" srcset="" class="card-content-img">
+                    <div class="card-content-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+                <div class="card-information">
+                    <h3>
+                        <a href="#">شعيريه نوبو</a>
+                    </h3>
+                    <div class="star-icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="price-item"> ٥ أكياس</p>
+                    <button class="button-produvts"><a>متوفر</a></button>
+                </div>
+            </li>
+
+            <li data-category="milk">
+                <div class="card-content">
+                    <img src="images/products/card-content/chees.png" alt="" srcset="" class="card-content-img">
+                    <div class="card-content-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+                <div class="card-information">
+                    <h3>
+                        <a href="#">جبنه بيضاء</a>
+                    </h3>
+                    <div class="star-icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="price-item"> 1kg </p>
+                    <button class="button-produvts"><a>متوفر</a></button>
+                </div>
+            </li>
+
+            <li data-category="meat">
+                <div class="card-content">
+                    <img src="images/products/card-content/ta.jpeg" alt="" srcset="" class="card-content-img">
+                    <div class="card-content-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+                <div class="card-information">
+                    <h3>
+                        <a href="#">طحنيه</a>
+                    </h3>
+                    <div class="star-icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="price-item">1kg </p>
+                    <button class="button-produvts"><a>متوفر</a></button>
+                </div>
+            </li>
+
+            <li data-category="fruits">
+                <div class="card-content">
+                    <img src="images/products/card-content/sweet2.jpg" alt="" srcset="" class="card-content-img">
+                    <div class="card-content-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+                <div class="card-information">
+                    <h3>
+                        <a href="#">مربى</a>
+                    </h3>
+                    <div class="star-icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="price-item">  400gm </p>
+                    <button class="button-produvts"><a>متوفر</a></button>
+                </div>
+            </li>
+
+            <li data-category="fruits">
+                <div class="card-content">
+                    <img src="images/products/card-content/salsa.png" alt="" srcset="" class="card-content-img">
+                    <div class="card-content-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+                <div class="card-information">
+                    <h3>
+                        <a href="#">صلصه</a>
+                    </h3>
+                    <div class="star-icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="price-item">٢ علبه</p>
+                    <button class="button-produvts"><a>متوفر</a></button>
+                </div>
+            </li>
+
+            <li data-category="meat">
+                <div class="card-content">
+                    <img src="images/products/card-content/salt.webp" alt="" srcset="" class="card-content-img">
+                    <div class="card-content-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+                <div class="card-information">
+                    <h3>
+                        <a href="#"> ملح</a>
+                    </h3>
+                    <div class="star-icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="price-item"> 2Kilo </p>
+                    <button class="button-produvts"><a>متوفر</a></button>
+                </div>
+            </li>
+
+            <li data-category="meat">
+                <div class="card-content">
+                    <img src="images/products/card-content/gric.png" alt="" srcset="" class="card-content-img">
+                    <div class="card-content-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+                <div class="card-information">
+                    <h3>
+                        <a href="#"> ثوم</a>
+                    </h3>
+                    <div class="star-icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="price-item">نص رطل </p>
+                    <button class="button-produvts"><a>متوفر</a></button>
+                </div>
+            </li>
+
+            <li data-category="meat">
+                <div class="card-content">
+                    <img src="images/products/card-content/kaz.jpg" alt="" srcset="" class="card-content-img">
+                    <div class="card-content-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+                <div class="card-information">
+                    <h3>
+                        <a href="#">نص كزبره</a>
+                    </h3>
+                    <div class="star-icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="price-item"> رطل </p>
+                    <button class="button-produvts"><a>متوفر</a></button>
+                </div>
+            </li>
+
+
+            <li data-category="meat">
+                <div class="card-content">
+                    <img src="images/products/card-content/mage.jpg" alt="" srcset="" class="card-content-img">
+                    <div class="card-content-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+                <div class="card-information">
+                    <h3>
+                        <a href="#">نص  بكت ماجي </a>
+                    </h3>
+                    <div class="star-icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="price-item"> 350gm </p>
+                    <button class="button-produvts"><a>متوفر</a></button>
+                </div>
+            </li>
+
+            <li data-category="meat">
+                <div class="card-content">
+                    <img src="images/products/card-content/tea.jpg" alt="" srcset="" class="card-content-img">
+                    <div class="card-content-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+                <div class="card-information">
+                    <h3>
+                        <a href="#">شاس العزالتين</a>
+                    </h3>
+                    <div class="star-icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="price-item"> ١ رطل </p>
+                    <button class="button-produvts"><a>متوفر</a></button>
+                </div>
+            </li>
+            <li>
+                <div class="card-content">
+                    <img src="images/products/card-content/coki.png" alt="" srcset="" class="card-content-img">
+                    <div class="card-content-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+                <div class="card-information">
+                    <h3>
+                        <a href="#"> بسكويت</a>
+                    </h3>
+                    <div class="star-icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="price-item"> كرتونه </p>
+                    <button class="button-produvts"><a>متوفر</a></button>
+                </div>
+            </li>
+            <li data-category="vegetables">
+                <div class="card-content">
+                    <img src="images/products/card-content/podersoup.jfif" alt="" srcset="" class="card-content-img">
+                    <div class="card-content-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+                <div class="card-information">
+                    <h3>
+                        <a href="#">صابون بدره</a>
+                    </h3>
+                    <div class="star-icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="price-item"> ٢ كيلو </p>
+                    <button class="button-produvts"><a>متوفر</a></button>
+                </div>
+            </li>
+            <li data-category="vegetables">
+                <div class="card-content">
+                    <img src="images/products/card-content/soup.png" alt="" srcset="" class="card-content-img">
+                    <div class="card-content-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+                <div class="card-information">
+                    <h3>
+                        <a href="#"> معجون صابون</a>
+                    </h3>
+                    <div class="star-icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="price-item">٧٠٠ جرام </p>
+                    <button class="button-produvts"><a>متوفر</a></button>
+                </div>
+            </li>
+            <li data-category="vegetables">
+                <div class="card-content">
+                    <img src="images/products/card-content/soup1.png" alt="" srcset="" class="card-content-img">
+                    <div class="card-content-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+                <div class="card-information">
+                    <h3>
+                        <a href="#">صابون سائل </a>
+                    </h3>
+                    <div class="star-icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="price-item"> ١ لتر </p>
+                    <button class="button-produvts"><a>متوفر</a></button>
+                </div>
+            </li>
+
+            <li data-category="vegetables">
+                <div class="card-content">
+                    <img src="images/products/card-content/bathsoup.jpg" alt="" srcset="" class="card-content-img">
+                    <div class="card-content-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+                <div class="card-information">
+                    <h3>
+                        <a href="#">صابون حمام</a>
+                    </h3>
+                    <div class="star-icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="price-item"> نص دسته </p>
+                    <button class="button-produvts"><a>متوفر</a></button>
+                </div>
+            </li>
+
+            <li data-category="vegetables">
+                <div class="card-content">
+                    <img src="images/products/card-content/signal.webp" alt="" srcset="" class="card-content-img">
+                    <div class="card-content-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+                <div class="card-information">
+                    <h3>
+                        <a href="#">معجون سيجنال</a>
+                    </h3>
+                    <div class="star-icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="price-item"> كبير </p>
+                    <button class="button-produvts"><a>متوفر</a></button>
+                </div>
+            </li>
+
+            <li data-category="flour ">
+                <div class="card-content">
+                    <img src="images/products/card-content/suger.png" alt="" srcset="" class="card-content-img">
+                    <div class="card-content-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+                <div class="card-information">
+                    <h3>
+                        <a href="#"> شوال سكر مستورد</a>
+                    </h3>
+                    <div class="star-icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="price-item">   ٢٠ كيلو </p>
+                    <button class="button-produvts"><a>متوفر</a></button>
+                </div>
+            </li>
+
+            <li data-category="flour ">
+                <div class="card-content">
+                    <img src="images/products/card-content/flour.png" alt="" srcset="" class="card-content-img">
+                    <div class="card-content-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+                <div class="card-information">
+                    <h3>
+                        <a href="#">  بكت دقيق</a>
+                    </h3>
+                    <div class="star-icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="price-item"> ١٠ كيلو</p>
+                    <button class="button-produvts"><a>متوفر</a></button>
+                </div>
+            </li>
+
+            <li data-category="flour ">
+                <div class="card-content">
+                    <img src="images/products/card-content/onion.webp" alt="" srcset="" class="card-content-img">
+                    <div class="card-content-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+                <div class="card-information">
+                    <h3>
+                        <a href="#"> بصل اجمر</a>
+                    </h3>
+                    <div class="star-icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="price-item">   ربع </p>
+                    <button class="button-produvts"><a>متوفر</a></button>
+                </div>
+            </li>
+
+            <li li data-category="flour ">
+                <div class="card-content">
+                    <img src="images/products/card-content/rice.jpg" alt="" srcset="" class="card-content-img">
+                    <div class="card-content-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+                <div class="card-information">
+                    <h3>
+                        <a href="#">ارز</a>
+                    </h3>
+                    <div class="star-icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="price-item">  ٣ كيلو </p>
+                    <button class="button-produvts"><a>متوفر</a></button>
+                </div>
+            </li>
+
+            <li li data-category="flour ">
+                <div class="card-content">
+                    <img src="images/products/card-content/ades.jfif" alt="" srcset="" class="card-content-img">
+                    <div class="card-content-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+                <div class="card-information">
+                    <h3>
+                        <a href="#"> عدس</a>
+                    </h3>
+                    <div class="star-icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="price-item">٣ كيلو </p>
+                    <button class="button-produvts"><a>متوفر</a></button>
+                </div>
+            </li>
+
+            <li data-category="meat">
+                <div class="card-content">
+                    <img src="images/products/card-content/dak.png" alt="" srcset="" class="card-content-img">
+                    <div class="card-content-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+                <div class="card-information">
+                    <h3>
+                        <a href="#">دكوة مساحن</a>
+                    </h3>
+                    <div class="star-icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="price-item"> كيلو </p>
+                    <button class="button-produvts"><a>متوفر</a></button>
+                </div>
+            </li>
+
+        </ul>
+        <button class="button-produvts1"><a>أطلب الان</a></button>
+    </section>
+    
+    <script>
+        // تحديد جميع العناصر الخاصة بالفئات والمنتجات
+        const tabLinks = document.querySelectorAll('.tablinks');
+        const products = document.querySelectorAll('.products ul li');
+
+        // دالة لإخفاء جميع المنتجات ثم إظهار المنتجات حسب الفئة المختارة
+        function filterProducts(category) {
+            products.forEach(product => {
+                if (product.getAttribute('data-category') === category || category === "all") {
+                    product.style.display = 'block'; // إظهار المنتج
+                } else {
+                    product.style.display = 'none'; // إخفاء المنتج
+                }
+
+            });
+        }
+
+        // إضافة مستمعين للأحداث لعناصر الفئات
+        tabLinks.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // إزالة تفعيل كل التابات وإضافة التفعيل للتاب الحالي
+                tabLinks.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                // الحصول على الفئة من التاب اللي تم النقر عليه
+                const category = tab.id.replace("dT_tab-", "");
+                
+                // تمرير الفئة لدالة التصفية
+                filterProducts(category);
+            });
+        });
+
+        // إظهار كل المنتجات كافتراضي عند بداية تحميل الصفحة
+        filterProducts("all");
+
+        const icon = document.querySelector(".list-icon"); // اسم الكلاس حق الأيقونة
+        const navList = document.querySelector(".nav-list nav");
+        const navListUl = document.querySelector(".nav-list nav ul");
+        
+        // إضافة حدث النقر للأيقونة وللقائمة
+        icon.addEventListener("click", toggleNav);
+        navList.addEventListener("click", toggleNav);
+        
+        // دالة التبديل
+        function toggleNav(event) {
+            // تأكد إن المستخدم نقر على الأيقونة أو جزء nav
+            if (event.target === icon || event.target === navList) {
+                navList.classList.toggle("open");
+                navListUl.classList.toggle("open");
+        
+                // تبديل الأيقونة
+                if (navList.classList.contains("open")) {
+                    icon.classList.remove("fa-bars"); // أيقونة القائمة
+                    icon.classList.add("fa-times");   // أيقونة الإغلاق
+                } else {
+                    icon.classList.remove("fa-times"); // أيقونة الإغلاق
+                    icon.classList.add("fa-bars");     // أيقونة القائمة
+                }
+            }
+        }
+        
+                    // نجيب كل العناصر داخل القائمة
+                const listItems = document.querySelectorAll(".overlay ul li a");
+        
+                // نضيف الحدث لكل عنصر في القائمة
+                listItems.forEach(item => {
+                    item.addEventListener("click", () => {
+                        // نشيل الكلاس "active" من كل العناصر
+                        listItems.forEach(a => a.classList.remove("active"));
+                        console.log('click')
+                        // نضيف الكلاس "active" للعنصر اللي اتضغط عليه
+                        item.classList.add("active");
+                    });
+                });
+        
+        
+        
+const backToTopBtn = document.querySelector(".start");
+const headerSection = document.getElementById("header");
+
+window.addEventListener("scroll", () => {
+  // يظهر الزر بعد تجاوز الهوم
+  if (window.scrollY > headerSection.offsetHeight) {
+    backToTopBtn.style.display = "block";
+  } else {
+    backToTopBtn.style.display = "none";
+  }
+});
+
+// الرجوع لأعلى الصفحة عند الضغط على الزر
+backToTopBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+
+    </script>
+
+</body>
+</html>

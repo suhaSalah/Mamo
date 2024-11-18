@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/3.4.0/css/flag-icons.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        
+</head>
+<body>
+
+<!-- شريط الإشعارات -->
+<div class="start"><i class="fa-solid fa-arrow-up-long"></i></div>
+
+<header id="header">
+    <!-- شريط الاتصال -->
+    <div class="contact-info green-bar">
+        <div class="container">
+            <div class="left">
+                <div class="email">
+                    <i class="fas fa-envelope"></i>
+                    <span>email@example.com</span>
+                </div>
+                <div>
+                    <i class="fas fa-phone"></i>
+                    <span>+97455100158</span>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- باقي الكود الخاص بالهيدر والقائمة الرئيسية -->
+
+    <div class="container">
+
+        <div class="nav-list">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="cart">
+                    <g>
+                        <path fill="#FC8F0E" d="M462.1,121.9,424.8,240.4a50.028,50.028,0,0,1-47.7,35H141.6l-.5.1L115,122l.4-.1Z"></path>
+                        <path fill="#89C74A" d="M393.1 402.1a40.8 40.8 0 1 1-40.8 40.8A40.843 40.843 0 0 1 393.1 402.1zM179.2 402.1a40.8 40.8 0 1 1-40.8 40.8A40.779 40.779 0 0 1 179.2 402.1zM423.9 357.8H195.7a59.918 59.918 0 0 1-59.2-50L96.4 71.6A39.929 39.929 0 0 0 57 38.3H39.9a10 10 0 0 1 0-20H57a59.737 59.737 0 0 1 59.1 50l40.1 236.3a39.929 39.929 0 0 0 39.4 33.3H423.8a10.029 10.029 0 0 1 10 10A9.859 9.859 0 0 1 423.9 357.8z"></path>
+                    </g>
+                </svg>
+                <div class="name-logo">
+                    <h1> ممو ماركت</h1>
+                    <p>markeet Store</p>
+                </div>
+            </div>
+
+            <nav class="overlay">
+                <ul>
+                    <li class="active"><a href="#home" class="active">الرئيسيه</a></li>
+                    <li><a href="#Gatogries">الباقات</a></li>
+                    <li><a href="#about-us">من نحن </a></li>
+                    <li><a href="#special">المنتجات</a></li>
+                    <li><a href="#review"> اراء العملاء</a></li>
+                    <li><a href="#latest-news">المدونه</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                </ul>
+            </nav>
+
+            <div class="right">
+                
+            <div class="icon">
+                <i class=" list-icon fas fa-bars "></i>
+                <i class="fas fa-user"></i>
+                <i class="fas fa-shopping-cart"></i>
+                <i class="fas fa-heart"></i>
+            </div>
+        
+            <div class="dropdown">
+                <button class="dropbtn">
+                <span class="country-code">SD</span>
+                <img src="images/home/flags/sudan.jfif" alt="US Flag" class="flag">
+                <i class="fa-solid fa-chevron-down arrow"></i>
+                </button>
+                <div class="dropdown-content">
+                <div class="dropdown-item">
+                    <span class="country-code">SD</span>
+                    <img src="images/home/flags/sudan.jfif" alt="Afghanistan Flag" class="flag">
+                </div>
+                <div class="dropdown-item">
+                    <span class="country-code">KSA</span>
+                    <img src="images/home/flags/saudia.png" alt="Afghanistan Flag" class="flag">
+                </div>
+                <div class="dropdown-item">
+                    <span class="country-code">QA</span>
+                    <img src="images/home/flags/Qatar.png" alt="Aland Islands Flag" class="flag">
+                </div>
+                <div class="dropdown-item">
+                    <span class="country-code">UAE</span>
+                    <img src="images/home/flags/Emirates.webp" alt="Albania Flag" class="flag">
+                </div>
+                <div class="dropdown-item">
+                    <span class="country-code">OM</span>
+                    <img src="images/home/flags/Oman.png" alt="Algeria Flag" class="flag">
+                </div>
+                <div class="dropdown-item">
+                    <span class="country-code">U.S</span>
+                    <img src="images/home/flags/America.png" alt="Andorra Flag" class="flag">
+                </div>
+                </div>
+            </div>
+
+            </div>
+
+
+        </div>
+
+        <form>
+            <div id="toggle" class="toggle-button">
+                <div class="all-categories">
+                    <button type="button" class="all-categories2">All Categories</button>
+                    <i class="fa-solid fa-chevron-down arrow"></i>
+                </div>
+    
+                <div class="dropdown-content1 ">
+                    <div class="dropdown-item1 animate__animated animate__slideInDown" data-value="Fruits">Fruits</div>
+                    <div class="dropdown-item1 animate__animated animate__slideInDown" data-value="Vegetables">Vegetables</div>
+                    <div class="dropdown-item1 animate__animated animate__slideInDown" data-value="Flour">Flour</div>
+                    <div class="dropdown-item1 animate__animated animate__slideInDown" data-value="Cookies">Cookies</div>
+                    <div class="dropdown-item1 animate__animated animate__slideInDown" data-value="Meat">Meat</div>
+                </div>
+                
+            </div>  
+            
+            <div class="search">
+                <input type="search" placeholder="Search">
+            </div>
+            <span><i class="fa fa-magnifying-glass"></i></span>
+        </form>
+
+    </div>
+    
+</header>
+
+    <!-- قسم الشرائح الترويجية -->
+    <section class="home" id="home">
+        <div class="slideshow active" style="background-image: url('images/home/slide/slider-3.webp');">
+            <div class="slideshow__text">
+                <img src="images/home/slide/slider-icon.png" alt="" class="logo-home">
+                <h2 class="banner__sub_heading">باقات ممّو ماركت</h2>
+                <h2 class="banner__heading h1">100%  منتجات سودانيه</h2>
+                <div class="banner__text">
+                    <span>تغيير بسيط، فرق كبير 🌱</span>
+                </div>
+                <div class="banner__buttons">
+                    <a href="#Gatogries" class="button button--primary">تسوق الآن</a>
+                </div>
+            </div>
+        </div> 
+        <!-- باقي الشرائح يمكن تخصيصها بنفس الطريقة لعرض باقات مختلفة -->
+        <div class="slideshow" style="background-image: url('images/home/slide/slider-2.webp');">
+            <div class="slideshow__text2">
+                <h2 class="banner__sub_heading">ممو ماركت</h2>
+                <h2 class="banner__heading h1">م تشيل هم زاد اسرتك في السودان</h2>
+                <div class="banner__text">
+                    <span>...كل احتياجات اهلك في السودان</span>
+                </div>
+                <div class="additional_text">
+                    <span>...بتصلهم لحد باب البيت كمان</span>
+                </div>
+                <div class="banner__buttons">
+                    <a href="#Gatogries" class="button button--primary">تسوّق الآن</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="slideshow" style="background-image: url('images/home/slide/slider-1.webp');">
+            <div class="slideshow__text1">
+                <h2 class="banner__sub_heading">اشتري لأحبائك بالسودان</h2>
+                <h2 class="banner__heading h1">طعام عالي الجودة وسهل الطلب</h2>
+                <div class="banner__text">
+                    <span>وفر لأسرتك تجربة غذاء طازج وصحي</span>
+                </div>
+                <div class="banner__buttons">
+                    <a href="#Gatogries" class="button button--primary">استعرض الباقات</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="arrow left" onclick="changeSlide(-1)">&#10094;</div>
+        <div class="arrow right" onclick="changeSlide(1)">&#10095;</div> 
+    </section>
+
+    <!--الباقات-->
+
+    <div class="Gatogries" id="Gatogries">
+        <div class="gatogries_ve_fr">
+
+            <div class="grid-banner-content left ">
+                <div class="grid-banner-inners">
+                    <h2 class="main-title ">
+                        الباقه الذهبيه
+                    </h2>
+                    <h4 class="sub-title"><strong>  617,000 SD</strong></h4>
+                    <a href="testq3/indexfinal3.html" class="banner-button  left"><span>تسوق الان  </span></a>
+                </div> 
+            </div>
+
+            <div class="grid-banner-content right">
+                <div class="grid-banner-inners right">
+                    <h2 class="main-title ">
+                        الباقه الفضيه
+                    </h2>
+                    <h4 class="sub-title"><strong>357,000 SD </strong>  </h4>
+                    <a href="testq3/indexfinal31.html" class="banner-button right"><span>تسوق الان  </span></a>
+                </div> 
+            </div>
+
+            <div class="grid-banner-content right right1">
+                <div class="grid-banner-inners right right1">
+                    <h2 class="main-title ">
+                        الباقه الاساسيه
+                    </h2>
+                    <h4 class="sub-title"><strong>   227,000 SD</strong></h4>
+                    <a href="testq3/indexfinal32.html" class="banner-button right right1"><span>تسوق الان  </span></a>
+                </div> 
+            </div>
+
+        </div>
+    </div>
+
+    <!--من نحن-->
+
+    <section class="discount" id="about-us">
+        <div class="container">
+            <div class="discount-info">
+                <h2 class="info-head">
+                    تسوق بسهولة ووصل أسرتك بالحب 
+                </h2>
+                <p class="info-pra">
+                    مع ممُّو ماركت، أنت أقرب لأسرتك في السودان، حتى لو كنت بعيد! نحن بنوفر ليك منصة متكاملة لطلب المواد الغذائية والمنتجات الضرورية بأسعار مناسبة وجودة مضمونة كل اللي عليك تختار الباقة المناسبة، تحول قيمتها، ونحن بنتكفل بالتوصيل لحد باب البيت بكل أمان وسرعة 
+                </p>
+                <button class="info-butt"><a><i class="fas fa-tag"></i> تسوق الان</a></button>
+            </div>
+        </div>
+    </section>
+
+    <!--المنتجات-->
+
+    <section class="special" id="special">
+        <div class="container">
+            <div class="special-info">
+                <h3 class="sub-heading"> المنتجات </h3>
+                <p class="info-desc">منتجات مميزة تناسب احتياجاتك اليومية استمتع بأفضل جودة وبأسعار تنافسية، ممّو ماركت دايماً بجانبك </p>
+            </div>
+            <div class="special-products">
+                <ul class="special-products-list">
+                    <li class="special-products-list-item">
+                        <div class="list-item-img">
+                            <p class="item-img-desc">
+                                Available
+                            </p>
+                            <img src="images/special-products/pasta.png" alt="" class="item-img-img">
+                            <div class="card-content-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="list-item-info">
+                            <h4 class="item-info-heading">
+                                مكرونة 
+                            </h4>
+                            <div class="list-item-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="list-item-price">
+                                <p>$6.97<span>$99.00</span></p>
+                            </div>
+                        </div>
+                        <div class="hover-effect"></div>
+                        <div class="hover-effect1"></div>
+                    </li>
+
+                    <li class="special-products-list-item">
+                        <div class="list-item-img">
+                            <p class="item-img-desc">
+                                Available
+                            </p>
+                            <img src="images/special-products/Kabo.png" alt="" class="item-img-img">
+                            <div class="card-content-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="list-item-info">
+                            <h4 class="item-info-heading">
+                                 لبن بدره
+                            </h4>
+                            <div class="list-item-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="list-item-price">
+                                <p>$6.97<span>$99.00</span></p>
+                            </div>
+                        </div>
+                        <div class="hover-effect"></div>
+                        <div class="hover-effect1"></div>
+                    </li>
+
+                    <li class="special-products-list-item">
+                        <div class="list-item-img">
+                            <p class="item-img-desc">
+                                Available
+                            </p>
+                            <img src="images/special-products/zet.jfif" alt="" class="item-img-img">
+                            <div class="card-content-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="list-item-info">
+                            <h4 class="item-info-heading">
+                                 زيت
+                            </h4>
+                            <div class="list-item-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="list-item-price">
+                                <p>$6.97<span>$99.00</span></p>
+                            </div>
+                        </div>
+                        <div class="hover-effect"></div>
+                        <div class="hover-effect1"></div>
+                    </li>
+
+                    <li class="special-products-list-item">
+                        <div class="list-item-img">
+                            <p class="item-img-desc">
+                                Available
+                            </p>
+                            <img src="images/special-products/onion.webp" alt="" class="item-img-img">
+                            <div class="card-content-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="list-item-info">
+                            <h4 class="item-info-heading">
+                                بصل احمر
+                            </h4>
+                            <div class="list-item-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="list-item-price">
+                                <p>$6.97<span>$99.00</span></p>
+                            </div>
+                        </div>
+                        <div class="hover-effect"></div>
+                        <div class="hover-effect1"></div>
+                    </li>
+
+                    <li class="special-products-list-item">
+                        <div class="list-item-img">
+                            <p class="item-img-desc">
+                                Available
+                            </p>
+                            <img src="images/special-products/suger.png" alt="" class="item-img-img">
+                            <div class="card-content-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="list-item-info">
+                            <h4 class="item-info-heading">
+                                سكر
+                            </h4>
+                            <div class="list-item-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="list-item-price">
+                                <p>$6.97<span>$99.00</span></p>
+                            </div>
+                        </div>
+                        <div class="hover-effect"></div>
+                        <div class="hover-effect1"></div>
+                    </li>
+
+                    <li class="special-products-list-item">
+                        <div class="list-item-img">
+                            <p class="item-img-desc">
+                                Available
+                            </p>
+                            <img src="images/special-products/rice.jpg" alt="" class="item-img-img">
+                            <div class="card-content-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="list-item-info">
+                            <h4 class="item-info-heading">
+                                ارز
+                            </h4>
+                            <div class="list-item-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="list-item-price">
+                                <p>$6.97<span>$99.00</span></p>
+                            </div>
+                        </div>
+                        <div class="hover-effect"></div>
+                        <div class="hover-effect1"></div>
+                    </li>
+
+                    <li class="special-products-list-item">
+                        <div class="list-item-img">
+                            <p class="item-img-desc">
+                                Available
+                            </p>
+                            <img src="images/special-products/ades.jfif" alt="" class="item-img-img">
+                            <div class="card-content-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="list-item-info">
+                            <h4 class="item-info-heading">
+                                عدس
+                            </h4>
+                            <div class="list-item-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="list-item-price">
+                                <p>$6.97<span>$99.00</span></p>
+                            </div>
+                        </div>
+                        <div class="hover-effect"></div>
+                        <div class="hover-effect1"></div>
+                    </li>
+
+                    <li class="special-products-list-item">
+                        <div class="list-item-img">
+                            <p class="item-img-desc">
+                                Available
+                            </p>
+                            <img src="images/special-products/pasta2.jfif" alt="" class="item-img-img">
+                            <div class="card-content-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="list-item-info">
+                            <h4 class="item-info-heading">
+                                شعيريه
+                            </h4>
+                            <div class="list-item-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="list-item-price">
+                                <p>$6.97<span>$99.00</span></p>
+                            </div>
+                        </div>
+                        <div class="hover-effect"></div>
+                        <div class="hover-effect1"></div>
+                    </li>
+
+                    <li class="special-products-list-item">
+                        <div class="list-item-img">
+                            <p class="item-img-desc">
+                                Available
+                            </p>
+                            <img src="images/special-products/chees.png" alt="" class="item-img-img">
+                            <div class="card-content-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="list-item-info">
+                            <h4 class="item-info-heading">
+                                جبنه بيضاء
+                            </h4>
+                            <div class="list-item-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="list-item-price">
+                                <p>$6.97<span>$99.00</span></p>
+                            </div>
+                        </div>
+                        <div class="hover-effect"></div>
+                        <div class="hover-effect1"></div>
+                    </li>
+
+                    <li class="special-products-list-item">
+                        <div class="list-item-img">
+                            <p class="item-img-desc">
+                                Available
+                            </p>
+                            <img src="images/special-products/ta.jpeg" alt="" class="item-img-img">
+                            <div class="card-content-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="list-item-info">
+                            <h4 class="item-info-heading">
+                                طحنيه
+                            </h4>
+                            <div class="list-item-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="list-item-price">
+                                <p>$6.97<span>$99.00</span></p>
+                            </div>
+                        </div>
+                        <div class="hover-effect"></div>
+                        <div class="hover-effect1"></div>
+                    </li>
+
+                    <li class="special-products-list-item">
+                        <div class="list-item-img">
+                            <p class="item-img-desc">
+                                Available
+                            </p>
+                            <img src="images/special-products/mo.jpg" alt="" class="item-img-img">
+                            <div class="card-content-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="list-item-info">
+                            <h4 class="item-info-heading">
+                               مربى
+                            </h4>
+                            <div class="list-item-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="list-item-price">
+                                <p>$6.97<span>$99.00</span></p>
+                            </div>
+                        </div>
+                        <div class="hover-effect"></div>
+                        <div class="hover-effect1"></div>
+                    </li>
+
+                    <li class="special-products-list-item">
+                        <div class="list-item-img">
+                            <p class="item-img-desc">
+                                Available
+                            </p>
+                            <img src="images/special-products/maxtela.png" alt="" class="item-img-img">
+                            <div class="card-content-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="list-item-info">
+                            <h4 class="item-info-heading">
+                            ماكستيلا
+                            </h4>
+                            <div class="list-item-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="list-item-price">
+                                <p>$6.97<span>$99.00</span></p>
+                            </div>
+                        </div>
+                        <div class="hover-effect"></div>
+                        <div class="hover-effect1"></div>
+                    </li>
+
+                    <li class="special-products-list-item">
+                        <div class="list-item-img">
+                            <p class="item-img-desc">
+                                Available
+                            </p>
+                            <img src="images/special-products/salsa.png" alt="" class="item-img-img">
+                            <div class="card-content-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="list-item-info">
+                            <h4 class="item-info-heading">
+                            صلصه
+                            </h4>
+                            <div class="list-item-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="list-item-price">
+                                <p>$6.97<span>$99.00</span></p>
+                            </div>
+                        </div>
+                        <div class="hover-effect"></div>
+                        <div class="hover-effect1"></div>
+                    </li>
+
+                    <li class="special-products-list-item">
+                        <div class="list-item-img">
+                            <p class="item-img-desc">
+                                Available
+                            </p>
+                            <img src="images/special-products/salt.webp" alt="" class="item-img-img">
+                            <div class="card-content-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="list-item-info">
+                            <h4 class="item-info-heading">
+                               ملح
+                            </h4>
+                            <div class="list-item-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="list-item-price">
+                                <p>$6.97<span>$99.00</span></p>
+                            </div>
+                        </div>
+                        <div class="hover-effect"></div>
+                        <div class="hover-effect1"></div>
+                    </li>
+
+                    <li class="special-products-list-item">
+                        <div class="list-item-img">
+                            <p class="item-img-desc">
+                                Available
+                            </p>
+                            <img src="images/special-products/gric.png" alt="" class="item-img-img">
+                            <div class="card-content-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="list-item-info">
+                            <h4 class="item-info-heading">
+                                ثوم
+                            </h4>
+                            <div class="list-item-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="list-item-price">
+                                <p>$6.97<span>$99.00</span></p>
+                            </div>
+                        </div>
+                        <div class="hover-effect"></div>
+                        <div class="hover-effect1"></div>
+                    </li>
+
+                    <li class="special-products-list-item">
+                        <div class="list-item-img">
+                            <p class="item-img-desc">
+                                Available
+                            </p>
+                            <img src="images/special-products/kaz.jpg" alt="" class="item-img-img">
+                            <div class="card-content-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="list-item-info">
+                            <h4 class="item-info-heading">
+                                كزبره
+                            </h4>
+                            <div class="list-item-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="list-item-price">
+                                <p>$6.97<span>$99.00</span></p>
+                            </div>
+                        </div>
+                        <div class="hover-effect"></div>
+                        <div class="hover-effect1"></div>
+                    </li>
+
+                    <li class="special-products-list-item">
+                        <div class="list-item-img">
+                            <p class="item-img-desc">
+                                Available
+                            </p>
+                            <img src="images/special-products/kamon.webp" alt="" class="item-img-img">
+                            <div class="card-content-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="list-item-info">
+                            <h4 class="item-info-heading">
+                                فلفل اسود
+                            </h4>
+                            <div class="list-item-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="list-item-price">
+                                <p>$6.97<span>$99.00</span></p>
+                            </div>
+                        </div>
+                        <div class="hover-effect"></div>
+                        <div class="hover-effect1"></div>
+                    </li>
+
+                    <li class="special-products-list-item">
+                        <div class="list-item-img">
+                            <p class="item-img-desc">
+                                Available
+                            </p>
+                            <img src="images/special-products/mage.jpg" alt="" class="item-img-img">
+                            <div class="card-content-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="list-item-info">
+                            <h4 class="item-info-heading">
+                                ماجي
+                            </h4>
+                            <div class="list-item-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="list-item-price">
+                                <p>$6.97<span>$99.00</span></p>
+                            </div>
+                        </div>
+                        <div class="hover-effect"></div>
+                        <div class="hover-effect1"></div>
+                    </li>
+
+                    <li class="special-products-list-item">
+                        <div class="list-item-img">
+                            <p class="item-img-desc">
+                                Available
+                            </p>
+                            <img src="images/special-products/dak.png" alt="" class="item-img-img">
+                            <div class="card-content-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="list-item-info">
+                            <h4 class="item-info-heading">
+                                دكوة مساحن
+                            </h4>
+                            <div class="list-item-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="list-item-price">
+                                <p>$6.97<span>$99.00</span></p>
+                            </div>
+                        </div>
+                        <div class="hover-effect"></div>
+                        <div class="hover-effect1"></div>
+                    </li>
+
+                    <li class="special-products-list-item">
+                        <div class="list-item-img">
+                            <p class="item-img-desc">
+                                Available
+                            </p>
+                            <img src="images/special-products/tea.jpg" alt="" class="item-img-img">
+                            <div class="card-content-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="list-item-info">
+                            <h4 class="item-info-heading">
+                                شاي العزالتين
+                            </h4>
+                            <div class="list-item-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="list-item-price">
+                                <p>$6.97<span>$99.00</span></p>
+                            </div>
+                        </div>
+                        <div class="hover-effect"></div>
+                        <div class="hover-effect1"></div>
+                    </li>
+
+                    <li class="special-products-list-item">
+                        <div class="list-item-img">
+                            <p class="item-img-desc">
+                                Available
+                            </p>
+                            <img src="images/special-products/coki.png" alt="" class="item-img-img">
+                            <div class="card-content-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="list-item-info">
+                            <h4 class="item-info-heading">
+                            بسكويت
+                            </h4>
+                            <div class="list-item-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="list-item-price">
+                                <p>$6.97<span>$99.00</span></p>
+                            </div>
+                        </div>
+                        <div class="hover-effect"></div>
+                        <div class="hover-effect1"></div>
+                    </li>
+
+                    <li class="special-products-list-item">
+                        <div class="list-item-img">
+                            <p class="item-img-desc">
+                                Available
+                            </p>
+                            <img src="images/special-products/podersoup.jfif" alt="" class="item-img-img">
+                            <div class="card-content-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="list-item-info">
+                            <h4 class="item-info-heading">
+                                صابون بدره
+                            </h4>
+                            <div class="list-item-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="list-item-price">
+                                <p>$6.97<span>$99.00</span></p>
+                            </div>
+                        </div>
+                        <div class="hover-effect"></div>
+                        <div class="hover-effect1"></div>
+                    </li>
+
+                    <li class="special-products-list-item">
+                        <div class="list-item-img">
+                            <p class="item-img-desc">
+                                Available
+                            </p>
+                            <img src="images/special-products/signal.webp" alt="" class="item-img-img">
+                            <div class="card-content-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="list-item-info">
+                            <h4 class="item-info-heading">
+                                معجون
+                            </h4>
+                            <div class="list-item-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="list-item-price">
+                                <p>$6.97<span>$99.00</span></p>
+                            </div>
+                        </div>
+                        <div class="hover-effect"></div>
+                        <div class="hover-effect1"></div>
+                    </li>
+
+                    <li class="special-products-list-item">
+                        <div class="list-item-img">
+                            <p class="item-img-desc">
+                                Available
+                            </p>
+                            <img src="images/special-products/bathsoup.jpg" alt="" class="item-img-img">
+                            <div class="card-content-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="list-item-info">
+                            <h4 class="item-info-heading">
+                                صابون حمام
+                            </h4>
+                            <div class="list-item-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="list-item-price">
+                                <p>$6.97<span>$99.00</span></p>
+                            </div>
+                        </div>
+                        <div class="hover-effect"></div>
+                        <div class="hover-effect1"></div>
+                    </li>
+
+                    <li class="special-products-list-item">
+                        <div class="list-item-img">
+                            <p class="item-img-desc">
+                                Available
+                            </p>
+                            <img src="images/special-products/soup1.png" alt="" class="item-img-img">
+                            <div class="card-content-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="list-item-info">
+                            <h4 class="item-info-heading">
+                                صابون سائل
+                            </h4>
+                            <div class="list-item-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="list-item-price">
+                                <p>$6.97<span>$99.00</span></p>
+                            </div>
+                        </div>
+                        <div class="hover-effect"></div>
+                        <div class="hover-effect1"></div>
+                    </li>
+
+                    <li class="special-products-list-item">
+                        <div class="list-item-img">
+                            <p class="item-img-desc">
+                                Available
+                            </p>
+                            <img src="images/special-products/soup.png" alt="" class="item-img-img">
+                            <div class="card-content-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="list-item-info">
+                            <h4 class="item-info-heading">
+                                معجون صابون
+                            </h4>
+                            <div class="list-item-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="list-item-price">
+                                <p>$6.97<span>$99.00</span></p>
+                            </div>
+                        </div>
+                        <div class="hover-effect"></div>
+                        <div class="hover-effect1"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!--اراء العملاء-->
+    <section class="review" id="review">
+        <div class="container">
+            <div class="review-info">
+                <h2 class="info-heading"> Our Client Say </h2>
+                <p class="info-pra"> Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras </p>
+                <div class="info-containt">
+                    <div class="containt-personal active">
+                        <div class="personal-info">
+                            <img src="images/review/1.jpg" alt="" class="personal-img">
+                            <div class="personal-name">
+                                <h3 class="name-client">Emy Raizaa</h3>
+                                <p class="name-job">Nutrionist</p>
+                            </div>
+                        </div>
+                        <p class="personal-comment">
+                            Lacus suspendisse faucibus interdum posuere lorem ipsum dolor sit. Ut aliquam purus sit amet. Congue mauris rhoncus
+                            aenean vel elit scelerisque mauris pellentesque pulvinar. Porttitor rhoncus dolor purus non enim praesent.
+                        </p>
+                        <div class="personal-icon">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+
+                    <div class="containt-personal">
+                        <div class="personal-info">
+                            <img src="images/review/2.jpg" alt="" class="personal-img">
+                            <div class="personal-name">
+                                <h3 class="name-client">Lindse Johnson</h3>
+                                <p class="name-job">Dietician</p>
+                            </div>
+                        </div>
+                        <p class="personal-comment">
+                            Lacus suspendisse faucibus interdum posuere lorem ipsum dolor sit. Ut aliquam purus sit amet. Congue mauris rhoncus
+                            aenean vel elit scelerisque mauris pellentesque pulvinar. Porttitor rhoncus dolor purus non enim praesent.
+                        </p>
+                        <div class="personal-icon">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+
+                    <div class="containt-personal">
+                        <div class="personal-info">
+                            <img src="images/review/3.jpg" alt="" class="personal-img">
+                            <div class="personal-name">
+                                <h3 class="name-client">Mc Berry Walter</h3>
+                                <p class="name-job">Food Analyst</p>
+                            </div>
+                        </div>
+                        <p class="personal-comment">
+                            Lacus suspendisse faucibus interdum posuere lorem ipsum dolor sit. Ut aliquam purus sit amet. Congue mauris rhoncus
+                            aenean vel elit scelerisque mauris pellentesque pulvinar. Porttitor rhoncus dolor purus non enim praesent.
+                        </p>
+                        <div class="personal-icon">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="arrow left" onclick="changePersone(-1)">&#10094;</div>
+            <div class="arrow right" onclick="changePersone(1)">&#10095;</div>
+                
+        </div>
+    </section>
+
+    <!--Blogs-->
+
+    <section class="latest-news" id="latest-news">
+        <div class="container">
+            <h2 class="news-heading"> Latest News </h2>
+            <p class="news-pra">Est ante in nibh mauris cursus donec enim diam</p>
+            <ul>
+                <li class="new-containt">
+                    <div class="containt-img">
+                        <img src="images/latest/blog-1.webp" alt="" class="img-img">
+                    </div>
+                    <div class="containt-data">
+                        <p><i class="fa-regular fa-circle-user" class="first"></i>Ramamoorthi M</p>
+                        <p>|</p>
+                        <p><i class="fa-solid fa-calendar-days"></i>March 26, 2020</p>
+                    </div>
+                    <div class="contain-desc">
+                        <h2 class="desc-heading"> Best In Quality Fresh Meat $ Seafood</h1>
+                        <p class="desc-pra">Turpis nunc eget lorem dolor. Pretium quam vulputate dignissim suspendisse in est ante. Varius duis at 
+                            consectetur lorem donec. Praesent semper feugiat nibh sed pulvinar proin. Suspendisse faucibus interdum posuere...
+                        </p>
+                        <button class="desc-button">Read More</button>
+                    </div>
+                </li>
+    
+                <li class="new-containt">
+                    <div class="containt-img">
+                        <img src="images/latest/blog-2.webp" alt="" class="img-img">
+                    </div>
+                    <div class="containt-data">
+                        <p><i class="fa-regular fa-circle-user" class="first"></i>Ramamoorthi M</p>
+                        <p>|</p>
+                        <p><i class="fa-solid fa-calendar-days"></i>March 26, 2020</p>
+                    </div>
+                    <div class="contain-desc">
+                        <h2 class="desc-heading"> Best Way To Eat Dry Fruits And Nuts</h1>
+                        <p class="desc-pra">Turpis nunc eget lorem dolor. Pretium quam vulputate dignissim suspendisse in est ante. Varius duis at 
+                            consectetur lorem donec. Praesent semper feugiat nibh sed pulvinar proin. Suspendisse faucibus interdum posuere...
+                        </p>
+                        <button class="desc-button">Read More</button>
+                    </div>
+                </li>
+    
+                <li class="new-containt">
+                    <div class="containt-img">
+                        <img src="images/latest/blog-3.webp" alt="" class="img-img">
+                    </div>
+                    <div class="containt-data">
+                        <p><i class="fa-regular fa-circle-user" class="first"></i>Ramamoorthi M</p>
+                        <p>|</p>
+                        <p><i class="fa-solid fa-calendar-days"></i>March 26, 2020</p>
+                    </div>
+                    <div class="contain-desc">
+                        <h2 class="desc-heading"> Fruits & Vegetable Nutrients For Your Health </h1>
+                        <p class="desc-pra">Turpis nunc eget lorem dolor. Pretium quam vulputate dignissim suspendisse in est ante. Varius duis at 
+                            consectetur lorem donec. Praesent semper feugiat nibh sed pulvinar proin. Suspendisse faucibus interdum posuere...
+                        </p>
+                        <button class="desc-button">Read More</button>
+                    </div>
+                </li>
+            </ul>
+            
+        </div>
+    </section>
+
+    <!--الاشتراك بالايميل-->
+
+    <section class="subscribe-section">
+        <h2 class="subscribe-heading">Subscribe To Our Emails</h2>
+        <form class="subscribe-form d-flex justify-content-center align-items-center mt-3">
+            <input type="email" placeholder="Email Address" aria-label="Email Address">
+            <button type="submit">Subscribe<i class="fas fa-paper-plane"></i></button>
+        </form>
+        <img src="images/subscribe-section/bag.png" alt="Vegetable Basket" class="subscribe-image">
+    </section>
+
+    <!--Footer-->
+
+    
+    <section class="conclution" id="contact">
+        <!-- شريط المعلومات العلوي -->
+        <section class="bg-success text-white py-4 info">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-3">
+                        <i class="fas fa-truck fa-2x mb-2"></i>
+                        <h5>توصيل سريع</h5>
+                        <p>لأي مكان في السودان</p>
+                    </div>
+                    <div class="col-md-3">
+                        <i class="fas fa-phone-alt fa-2x mb-2"></i>
+                        <h5>دعم مباشر</h5>
+                        <p>+(974) 55100158</p>
+                    </div>
+                    <div class="col-md-3">
+                        <i class="fas fa-headset fa-2x mb-2"></i>
+                        <h5>دعم على مدار الساعة</h5>
+                        <p>نسعى لخدمتك دائماً</p>
+                    </div>
+                    <div class="col-md-3">
+                        <i class="fas fa-exchange-alt fa-2x mb-2"></i>
+                        <h5>سياسة استبدال</h5>
+                        <p>استبدال خلال 30 يوماً</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- قسم الفوتر -->
+        <footer class="bg-dark text-white py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="cart">
+                                <g>
+                                    <path fill="#FC8F0E" d="M462.1,121.9,424.8,240.4a50.028,50.028,0,0,1-47.7,35H141.6l-.5.1L115,122l.4-.1Z"></path>
+                                    <path fill="#89C74A" d="M393.1 402.1a40.8 40.8 0 1 1-40.8 40.8A40.843 40.843 0 0 1 393.1 402.1zM179.2 402.1a40.8 40.8 0 1 1-40.8 40.8A40.779 40.779 0 0 1 179.2 402.1zM423.9 357.8H195.7a59.918 59.918 0 0 1-59.2-50L96.4 71.6A39.929 39.929 0 0 0 57 38.3H39.9a10 10 0 0 1 0-20H57a59.737 59.737 0 0 1 59.1 50l40.1 236.3a39.929 39.929 0 0 0 39.4 33.3H423.8a10.029 10.029 0 0 1 10 10A9.859 9.859 0 0 1 423.9 357.8z"></path>
+                                </g>
+                            </svg>
+                            <div class="name-logo">
+                                <h1> ممو ماركت</h1>
+                                <p>markeet Store</p>
+                            </div>
+                        </div>
+            
+                        <p><i class="fa-solid fa-location-dot"></i> السودان - الخرطوم </p>
+                        <p><i class="fas fa-phone"></i> +(974) 55100158</p>
+                        <p><i class="fas fa-envelope"></i> support@mamo-sd.com</p>
+                        <div class="social">
+                            <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-white me-3"><i class="fab fa-pinterest"></i></a>
+                            <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 two">
+                    <h5>المساعدة</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://2u.pw/t3nmt4zj" class="text-white">إنضموا إلى قروبنا في الواتساب</a><i class="fa-solid fa-chevron-left"></i></li>
+                        <li><span class="text-white">نسأل الله أن يرجع للسودان أمنه وأمانه</span></li>
+                    </ul>
+                </div>
+
+                    <div class="col-md-3 three">
+                            <img class="m-bok" src="images/pay/بنكك-removebg-preview.png">
+                        <p>بنكك</p>
+                        <p>2285687</p>
+                        <p>محمد / تطبيق ممو ماركت</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>مناطق الخدمة</h5>
+                        <ul class="list-unstyled">
+                            <li> أمدرمان محلية كرري_</li>
+                            <li> المناقل_</li>
+                            <li> بورتسودان_</li>
+                            <li> دنقلا - مروي - كريمه_</li>
+                            <li> عطبرة - شندي_</li>
+                            <li>القضارف_</li>
+                            <li> سنار - سنجة_</li>
+                            <li> كوستي - ربك_</li>
+                            <li> كسلا - حلفا الجديدة_</li>
+                            <li> تندلتي - الدمازين_</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <hr class="border-secondary">
+                <div class="d-flex justify-content-between align-items-center end">
+                    <p class="mb-0">&copy; 2024، ممّو ماركت. كل الحقوق محفوظة</p>
+                    <div class="images">
+                        <img src="images/pay/download (3).png" alt="Visa">
+                        <img src="images/pay/download (4).png" alt="MasterCard">
+                        <img src="images/pay/download (5).png" alt="paypal">
+                        <img src="images/pay/download (8).png" alt="Alraj">
+                        <img src="images/pay/download (7).png" alt="Discover">
+                        <img src="images/pay/download (9).png" alt="American Express">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+    
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script> -->
+<script src="js/main.js"></script>
+</body>
+</html>
