@@ -1507,7 +1507,6 @@ form  span i {
     line-height: 60px;
     border-radius: 50%;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6) , -5px -5px 10px rgba(0, 0, 0, 0.6) ;
-    z-index: 1000;
     display: block;
 }
 
@@ -1547,7 +1546,32 @@ form  span i {
         margin: auto;
     }
 
-
+    .review .review-info {
+        padding: 0;
+        text-align: left;
+    }
+    
+    .review .review-info .info-heading {
+        font-size: 1.5rem;
+        padding-top: .5rem;
+    }
+    
+    .review .review-info .info-pra {
+        font-size: 1rem;
+        padding-bottom: 0rem;
+    }
+    
+    .review .review-info .info-containt .containt-personal .personal-info {
+        width: 100%;
+        margin: 0rem auto;
+        display: block;
+        text-align: left;
+    }
+    
+    .review .review-info .info-containt .containt-personal .personal-comment {
+        font-size: 1rem;
+        text-align:center;
+    }
 }
 
 /*Blogs*/
@@ -1768,6 +1792,22 @@ top: 0%;
     }
 }
 
+@media (max-width:576px){
+    .subscribe-form {
+        width: 285px;
+        }
+
+    .subscribe-form input[type="email"] {
+                padding: 10px;
+                width: 140px;
+            }
+
+    .subscribe-form button {
+                padding: 10px 13px;
+                margin-left: auto;
+            }
+}
+
 /*footer*/
 .conclution{
     position: relative;
@@ -1909,6 +1949,14 @@ footer .social a {
 
     .border-secondary {
         border-color: transparent !important;
+    }
+
+    .conclution .bg-success .row div {
+        width: 100%;
+    }
+
+    .row {
+        padding: 1rem;
     }
 }
 
