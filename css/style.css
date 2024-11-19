@@ -624,12 +624,12 @@ form  span i {
         top: 0;
     }
 
-    .icon {
-        display: flex;
+    .icon i{
+        display: none;
     }
 
-    .icon i.list-icon {
-        display: block;
+    .icon i:first-of-type {
+        display: inline; /* إظهار الأيقونة الأولى فقط */
     }
 
     .nav-list nav {
@@ -786,16 +786,24 @@ form  span i {
 
         .nav-list nav , 
         .nav-list nav ul{
-            top: 42.4%;
+            top: 39.4%;
+            left: -135%;
         }
 
+        .left {
+            display: block;
+        }
+
+        header .container form {
+            display: none;
+        }        
     }
 
     /*الباقات*/
 
     .Gatogries .gatogries_ve_fr{
         display: flex;
-        padding: 50px;
+        padding: 50px 0;
     }
     
     .Gatogries .gatogries_ve_fr .grid-banner-content{
